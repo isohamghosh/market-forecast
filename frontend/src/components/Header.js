@@ -1,7 +1,7 @@
 import React from 'react';
 import { TrendingUp } from 'lucide-react';
 
-const Header = () => {
+const Header = ({ currentPage, setCurrentPage }) => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 p-6 rounded-3xl shadow-2xl mb-8 animate-slide-up">
       <div className="flex items-center justify-between">
@@ -19,10 +19,24 @@ const Header = () => {
           </div>
         </div>
         <div className="flex space-x-6">
-          <button className="text-white hover:text-blue-200 text-lg font-medium transition-all duration-300 hover:scale-105 transform px-4 py-2 rounded-lg hover:bg-white/10">
+          <button 
+            onClick={() => setCurrentPage('home')}
+            className={`text-lg font-medium transition-all duration-300 hover:scale-105 transform px-4 py-2 rounded-lg ${
+              currentPage === 'home' 
+                ? 'text-white bg-white/20 shadow-lg' 
+                : 'text-white hover:text-blue-200 hover:bg-white/10'
+            }`}
+          >
             Home
           </button>
-          <button className="text-white hover:text-blue-200 text-lg font-medium transition-all duration-300 hover:scale-105 transform px-4 py-2 rounded-lg hover:bg-white/10">
+          <button 
+            onClick={() => setCurrentPage('about')}
+            className={`text-lg font-medium transition-all duration-300 hover:scale-105 transform px-4 py-2 rounded-lg ${
+              currentPage === 'about' 
+                ? 'text-white bg-white/20 shadow-lg' 
+                : 'text-white hover:text-blue-200 hover:bg-white/10'
+            }`}
+          >
             About
           </button>
         </div>

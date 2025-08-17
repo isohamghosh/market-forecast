@@ -63,7 +63,3 @@ dist/
 checkpoint/
 checkpoints/
 events.out.tfevents.*
-
-
-# Model
-AI_ML/models_store/

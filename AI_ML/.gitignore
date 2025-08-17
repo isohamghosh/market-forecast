@@ -64,6 +64,5 @@ checkpoint/
 checkpoints/
 events.out.tfevents.*
 
-
-# Model
-AI_ML/models_store/
+# Model folder
+models_store/
