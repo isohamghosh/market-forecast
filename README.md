@@ -50,7 +50,9 @@ setup.py            # Python package/setup configuration
 
 - **Web dashboard:** Visit `http://localhost:3000` (or the configured port) for interactive forecasts.
 - **API:** Use backend endpoints for programmatic access to predictions and historical data.
-- **Custom modeling:** Extend or update models in `AI_ML/` to improve accuracy or add new features.
+- **Custom modeling:** Extend or update models in `Google Collab` to improve accuracy or add new features. Try to use GPU for faster training.
+
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1trQxoJwNYRsnZVR1ZNwpokJYOHZlNjxe?usp=sharing)
 
 ## 🤝 Contributing
 
