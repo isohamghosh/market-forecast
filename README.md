@@ -52,10 +52,10 @@ setup.py            # Python package/setup configuration
 - **API:** Use backend endpoints for programmatic access to predictions and historical data.
 - **Custom modeling:** Extend or update models in `AI_ML/` to improve accuracy or add new features.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Submit issues or pull requests for bug fixes, feature requests, or enhancements.
 
-## Contact
+## 📫 Contact
 
 For questions or support, open an issue or contact [@isohamghosh](https://github.com/isohamghosh).
