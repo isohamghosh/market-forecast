@@ -54,6 +54,26 @@ setup.py            # Python package/setup configuration
 
    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1trQxoJwNYRsnZVR1ZNwpokJYOHZlNjxe?usp=sharing)
 
+## 🛠️ Development
+
+   1. **🌱 Clone the repository**
+
+   2. **🖥️ Start Backend Server:**
+      ```bash
+      cd backend
+      uvicorn main:app --reload
+      ```
+
+   3. **🎨 Start Frontend Server:**
+      ```bash
+      cd frontend
+      npm start
+      ```
+   4. **🧠 AI Model:** Recommended to use Google collab file to train model from here - [Google Colab](https://colab.research.google.com/drive/1trQxoJwNYRsnZVR1ZNwpokJYOHZlNjxe?usp=sharing)
+
+   
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! Submit issues or pull requests for bug fixes, feature requests, or enhancements.
