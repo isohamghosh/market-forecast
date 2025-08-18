@@ -5,9 +5,13 @@ from fastapi import APIRouter, HTTPException
 router = APIRouter()
 
 # Paths
-BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.."))
-ROOT = os.path.join(BASE, "market-forecast", "AI_ML")
-MODEL_DIR = os.path.join(ROOT, "models_store")
+_CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.normpath(os.path.join(_CURRENT_DIR, "..", ".."))
+
+default_ai_ml_dir = os.path.join(project_root, "AI_ML")
+DEFAULT_MODEL_DIR = os.path.join(default_ai_ml_dir, "models_store")
+
+MODEL_DIR = os.getenv("MODEL_DIR", DEFAULT_MODEL_DIR)
 DATA_PATH = os.path.join(MODEL_DIR, "master_data.csv")
 
 @router.get("/history/{stock}")
