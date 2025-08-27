@@ -16,8 +16,7 @@ MODEL_DIR = os.getenv("MODEL_DIR", DEFAULT_LOCAL_MODEL_DIR)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     os.makedirs(MODEL_DIR, exist_ok=True)
-    if not any(os.scandir(MODEL_DIR)):
-        download_drive_folder(FOLDER_URL, output_dir=MODEL_DIR)
+    download_drive_folder(FOLDER_URL, output_dir=MODEL_DIR)
     yield
 
 app = FastAPI(title="Stock Prediction API", lifespan=lifespan)
@@ -31,7 +30,7 @@ app.add_middleware(
 )
 
 @app.get("/health")
-def health():
+async def health():
     return {"status": "ok", "model_dir": MODEL_DIR}
 
 @app.get("/api/check-model")
